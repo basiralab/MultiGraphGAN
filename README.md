@@ -9,7 +9,7 @@ This repository provides the official PyTorch implementation of the following pa
 
 
 > **Topology-Aware Generative Adversarial Network for Joint Prediction of Multiple Brain Graphs from a Single Brain Graph**
-> [Alaa Bessadok](https://github.com/AlaaBessadok)<sup>1,2</sup>, [Mohamed Ali Mahjoub]<sup>1</sup>, [Islem Rekik](https://basira-lab.com/)<sup>1</sup>
+> [Alaa Bessadok](https://github.com/AlaaBessadok)<sup>1,2</sup>, [Mohamed Ali Mahjoub]<sup>2</sup>, [Islem Rekik](https://basira-lab.com/)<sup>1</sup>
 > <sup>1</sup>BASIRA Lab, Faculty of Computer and Informatics, Istanbul Technical University, Istanbul, Turkey
 > <sup>2</sup>University of Sousse, Higher Institute of Informatics and Communication Technologies, Sousse, Tunisia
 >
@@ -21,7 +21,7 @@ This work is published in MICCAI 2020, Lima, Peru. MultiGraphGAN is a geometric 
 
 # Installation
 
-The code has been tested with Python 3, PyTorch 1.0.1 on Ubuntu 16.04. GPU is required to run the code. You also need other dependencies (e.g., numpy, yaml, networkx, SIMLR) which can be installed via: 
+The code has been tested with Python 3, PyTorch 1.3.1 on Ubuntu 16.04. GPU is required to run the code. You also need other dependencies (e.g., numpy, yaml, networkx, SIMLR) which can be installed via: 
 
 ```bash
 pip install -r requirements.txt
@@ -34,24 +34,24 @@ We provide a demo code for the usage of MultiGraphGAN for multiple target graphs
 You can train the program with the following command:
 
 ```bash
-python MultiGraphGAN.py --num_domains=6 --nb_clusters=2 --mode='train'
+python main.py --num_domains=6 --nb_clusters=2 --mode='train'
 ```
 
 In this example, we simulated a training dataset with 280 samples and a testing set with 30 samples. If you want to test the code using the hyperparameters described in the paper, type in the terminal the following commande:
 
 ```bash
-python MultiGraphGAN.py --num_domains=6 --nb_clusters=2 --mode='test'
+python main.py --num_domains=6 --nb_clusters=2 --mode='test'
 ```
 
 # Input data
 
 In order to use our framework, you need to provide:
 
-* a source_target_domains list where each element is a matrix of size (n * f). We denote n the total number of subjects in the dataset and f the number of features. Any element of the list can be considered as the source domain and the rest are the target domains.
+* a source_target_domains list where each element is a matrix of size (n * f). We denote n the total number of subjects in the dataset and f the number of features. Any element of the list can be considered as the source domain and the rest are the target domains. You need to include your data in the file main.py. So, just remove our simulated training and testing dataset and replace it with yours.
 
 # Output Data
 
-If you set the number of source and target domains to 3 using this argument --num_domains=3 , and keep the same size of our simulated data, the execution of MultiGraphGAN.py will produce saved csv files of the source and target data. Then, you can plot the brain graphs of any subject from the saved csv files. To do so, run the plot.py to get the following outputs especially when running the demo with default parameter setting:
+If you set the number of source and target domains to 3 using this argument --num_domains=3 , and keep the same size of our simulated data, the execution of main.py will produce saved csv files of the source and target data. Then, you can plot the brain graphs of any subject from the saved csv files. To do so, run the plot.py to get the following outputs especially when running the demo with default parameter setting:
 
 <p align="center">
   <img src="./fig2.png">
