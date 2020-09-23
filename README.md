@@ -57,6 +57,15 @@ If you set the number of source and target domains to 3 using this argument --nu
   <img src="./fig2.png">
 </p>
 
+# YouTube videos to install and run the code and understand how MultiGraphGAN works
+
+To install and run MultiGraphGAN, check the following YouTube video:
+https://youtu.be/JvT5XtAgbUk
+
+To learn about how MultiGraphGAN works, check the following YouTube videos:
+Short version (5mn): https://youtu.be/vEnzMQqbdHc
+Long version (20mn): https://youtu.be/yNx7H9NLzlE
+
 # Related references
 
 Multi-Marginal Wasserstein GAN (MWGAN): 
