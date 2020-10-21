@@ -92,6 +92,10 @@ organization={Springer}
 }
 ```
 
+# MultiGraphGAN on arXiv
+
+https://arxiv.org/abs/2009.11058
+
 # Acknowledgement
 
 This project has been funded by the 2232 International Fellowship for Outstanding Researchers Program of TUBITAK (Project No:118C288, http://basira-lab.com/reprime/) supporting Dr. Islem Rekik. However, all scientific contributions made in this project are owned and approved solely by the authors.
