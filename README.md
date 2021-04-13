@@ -65,7 +65,7 @@ https://youtu.be/JvT5XtAgbUk
 
 To learn about how MultiGraphGAN works, check the following YouTube videos:
 
-Short version (5mn): https://youtu.be/vEnzMQqbdHc
+Short version (10mn): https://youtu.be/vEnzMQqbdHc
 
 Long version (20mn): https://youtu.be/yNx7H9NLzlE
 
