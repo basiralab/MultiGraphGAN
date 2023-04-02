@@ -1,4 +1,6 @@
 numpy
-yaml
 networkx
+annoy
+fbpca
 SIMLR
+yaml
