@@ -408,7 +408,7 @@ class MultiGraphGAN(object):
                 sum_cluster_pred_graph = 0
                 for par in range(self.opts.nb_clusters):
                     x_fake_i = self.Gs[idx][par](embedding,learn_adj(x_src))
-                    sum_cluster_pred_graph = np.add(sum_cluster_pred_graph,x_fake_i)
+                    sum_cluster_pred_graph = np.add(sum_cluster_pred_graph,x_fake_i.cpu())
 
                 average_predicted_target_graph = sum_cluster_pred_graph / float(self.opts.nb_clusters)
                 predicted_target_graphs.append(average_predicted_target_graph)
