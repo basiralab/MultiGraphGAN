@@ -105,7 +105,7 @@ opts.result_dir = os.path.join(opts.result_root, opts.result_dir)
 
 
 if __name__ == '__main__':
-
+    import pandas as pd
     # For fast training.
     cudnn.benchmark = True
     
@@ -175,7 +175,7 @@ if __name__ == '__main__':
 
       # Save data into csv files
         print("saving source graphs into csv file...") 
-        f = source_graphs.numpy()
+        f = source_graphs.cpu().numpy()
         dataframe = pd.DataFrame(data=f.astype(float))
         dataframe.to_csv('source_graphs.csv', sep=' ', header=True, float_format='%.6f', index=False)
 
