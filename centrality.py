@@ -25,7 +25,8 @@ def topological_measures(data):
         np.fill_diagonal(A, 0)
 
         # create a graph from similarity matrix
-        G = nx.from_numpy_matrix(A)
+        # G = nx.from_numpy_matrix(A)
+        G = nx.DiGraph(np.array(A))
         U = G.to_undirected()
 
         # Centrality #
