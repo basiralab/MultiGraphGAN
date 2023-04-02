@@ -20,7 +20,7 @@ def get_loader(features, batch_size, num_workers=1):
 def learn_adj(x):
     y = []
     for t in x:
-            b = t.numpy()
+            b = t.cpu().numpy()
             y.append(b)
     
     x = np.array(y)
@@ -28,7 +28,7 @@ def learn_adj(x):
     simlr = SIMLR.SIMLR_LARGE(1, batchsize/3, 0)
     adj, _,_, _ = simlr.fit(x)
     array = adj.toarray()
-    tensor = torch.Tensor(array)
+    tensor = torch.Tensor(array).cuda()
     
     return tensor
 
